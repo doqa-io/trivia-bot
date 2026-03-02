@@ -1,0 +1,100 @@
+/* ── Reset & Base ────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #1a1a2e;
+  color: #eaeaea;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ── Container ──────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 560px;
+  background: #16213e;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────── */
+header {
+  text-align: center;
+  padding: 2rem 1.5rem 1rem;
+  background: linear-gradient(135deg, #0f3460, #533483);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: #b8b8d1;
+}
+
+/* ── Chat Window ────────────────────────────────── */
+.chat-window {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.chat-bubble {
+  background: #1a1a2e;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ── Footer ─────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid #1a1a2e;
+}
+
+/* ── Scrollbar ──────────────────────────────────── */
+.chat-window::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #533483;
+  border-radius: 3px;
+}
